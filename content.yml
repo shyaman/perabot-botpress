@@ -12,4 +12,4 @@ goodbye:
 contactReply:
   - typing: true
     text:
-      - abs {{wit.entities.intent[0].value}}
+      - abs {{info}}
