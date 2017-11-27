@@ -1,8 +1,9 @@
 module.exports = bp => {
   bp.hear(/GET_STARTED|hello|hi|test|hey|holla/i, (event, next) => {
-    const eventAttrs = { name: 'shyaman', email: 'shyaman321@gmail.com', telephone:'0717175405'}
-    bp.db.get()
-          .then(knex => knex('contacts').insert(eventAttrs))
+
+    // using knex
+    // const eventAttrs = { name: 'shyaman', email: 'shyaman321@gmail.com', telephone:'0717175405'}
+    // bp.db.get().then(knex => knex('contacts').insert(eventAttrs))
     event.reply('#welcome') // See the file `content.yml` to see the block
   })
 
