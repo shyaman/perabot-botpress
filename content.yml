@@ -12,4 +12,4 @@ goodbye:
 contactReply:
   - typing: true
     text:
-      - get contact deatils
+      - wit.entities.intent[0].value
