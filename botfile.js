@@ -58,7 +58,7 @@ module.exports = {
     Postgres configuration
     If Postgres is not enabled, Botpress uses SQLite 3 (file-based database)
   */
-  /*
+
   postgres: {
     enabled: true,
     connection: process.env.DATABASE_URL,
@@ -69,13 +69,13 @@ module.exports = {
     database: process.env.PG_DB || 'perabot_db',
     ssl: process.env.PG_SSL || false
   },
-*/
 
-postgres: {
-  enabled: process.env.DATABASE === 'postgres',
-  connection: process.env.DATABASE_URL,
-  ssl: process.env.PG_SSL || false
-},
+
+// postgres: {
+//   enabled: process.env.DATABASE === 'postgres',
+//   connection: process.env.DATABASE_URL,
+//   ssl: process.env.PG_SSL || false
+// },
 
   umm: {
     /*
