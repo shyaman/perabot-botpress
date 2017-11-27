@@ -5,7 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "botpress": "1.x",
-    "botpress-messenger": "^2.2.9",
     "botpress-terminal": "^1.0.2",
     "botpress-web": "1.x"
   },
