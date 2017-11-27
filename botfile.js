@@ -75,7 +75,7 @@ postgres: {
   enabled: process.env.DATABASE === 'postgres',
   connection: process.env.DATABASE_URL,
   ssl: process.env.PG_SSL || false
-}
+},
 
   umm: {
     /*
