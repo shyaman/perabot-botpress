@@ -3,7 +3,7 @@ module.exports = bp => {
     console.log('>> get_contact_details')
     event.reply('#contactReply', {
       // You can pass data to the UMM bloc!
-      info: 'wit.entities.intent[0].value'
+      info: wit.entities.intent[0].value
     })
   })
 }
