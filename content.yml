@@ -11,6 +11,8 @@ goodbye:
 
 contactReply:
   - typing : true
-    text:
-        - Email address is {{email}} and phone number is {{phoneNumber}}
-        - {{information_type}} of Dr.{{person}} is {{email}}
+    text: Email address is {{email}} and phone number is {{phoneNumber}}
+
+contactReplyDistinct:
+  - typing : true
+    text: {{information_type}} of Dr.{{person}} is {{information}}
