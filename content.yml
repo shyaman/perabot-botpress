@@ -13,4 +13,4 @@ contactReply:
   - typing : true
     text:
         - Email address is {{email}} and phone number is {{phoneNumber}}
-        - {{information_type}} of {{person}} is {{email}}
+        - {{information_type}} of Dr.{{person}} is {{email}}
