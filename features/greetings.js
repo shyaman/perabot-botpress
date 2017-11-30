@@ -14,4 +14,9 @@ module.exports = bp => {
       reason: 'unknown'
     })
   })
+
+  bp.hear(/stop|abort|cancel/i, (event, next) => {
+      const convo = bp.convo.find(event)
+      convo && convo.stop('aborted')
+      })
 }
