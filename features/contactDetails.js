@@ -1,9 +1,20 @@
+const _ = require('lodash');
+
 module.exports = bp => {
-    bp.hear({'wit.entities.intent[0].value': 'get_contact_details'}, (event, next) => {
-    console.log('>> get_contact_details')
-    event.reply('#contactReply', {
-      // You can pass data to the UMM bloc!
-      info: {'wit.entities.intent[0].value'}
-    })
+  // when 'get_contact_information' intent trigger
+    bp.hear({'nlp.metadata.intentName': 'get_contact_information'}, (event, next) => {
+
+      let information_type = _.get(event, 'nlp.parameters.information_type')
+      let person = _.get(event, 'nlp.parameters.person')
+
+      bp.db.get().then(knex => knex('contacts').where({name : person}))
+      .then(contact =>{
+        const email = _.get(contact[0],'email')
+        const phoneNumber = _.get(contact[0],'telephone')
+
+        console.log(email);
+        event.reply('#welcome')
+      })
+
   })
 }

@@ -8,7 +8,7 @@
     "botpress-api.ai": "^2.1.6",
     "botpress-terminal": "^1.0.2",
     "botpress-web": "1.x",
-    "botpress-wit": "^2.0.11"
+    "lodash": "^4.17.4"
   },
   "scripts": {
     "start": "botpress start",
