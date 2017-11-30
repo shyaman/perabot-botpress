@@ -12,8 +12,12 @@ module.exports = bp => {
         const email = _.get(contact[0],'email')
         const phoneNumber = _.get(contact[0],'telephone')
 
-        console.log(email);
-        event.reply('#welcome')
+        event.reply('#contactReply',{
+          person:person,
+          information_type:information_type,
+          email:email,
+          phoneNumber:phoneNumber
+        });
       })
 
   })
