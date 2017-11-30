@@ -71,7 +71,8 @@ module.exports = bp => {
 
     })
 
-    bp.hear({'nlp.metadata.intentName': 'get_contact_information_with_context'}, (event, next) => {
+    // when 'get_contact_information_with _context' intent trigger
+    bp.hear({'nlp.metadata.intentName': 'get_contact_information_with_contexts'}, (event, next) => {
 
         const information_type = _.get(event, 'nlp.parameters.information_type')
         let person = _.get(event, 'nlp.parameters.person')
