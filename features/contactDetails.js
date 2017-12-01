@@ -12,24 +12,55 @@ module.exports = bp => {
         const email = _.get(contact[0],'email')
         const phoneNumber = _.get(contact[0],'telephone')
 
+
         if (information_type == '') {
-          event.reply('#contactReply',{
-            person:person,
-            email:email,
-            phoneNumber:phoneNumber
-          });
+          if(email != '' && phoneNumber != ''){
+            event.reply('#contactReply',{
+              person:person,
+              email:email,
+              phoneNumber:phoneNumber
+            });
+          }else if(email != '' && phoneNumber == ''){
+            event.reply('#telErrorReply',{
+              person:person,
+              email:email
+            });
+          }else if(email == '' && phoneNumber != ''){
+            event.reply('#emailErrorReply',{
+              person:person,
+              phoneNumber:phoneNumber
+            });
+          }
+
+
         } else if (information_type == 'Email address') {
-          event.reply('#contactReplyDistinct',{
-            person:person,
-            information: email,
-            information_type:information_type
-          });
+          if(email != ''){
+            event.reply('#contactReplyDistinct',{
+              person:person,
+              information: email,
+              information_type:information_type
+            });
+          }else{
+            event.reply('#contactErrorReply',{
+              person:person,
+              information_type:information_type
+            });
+          }
+
         } else if (information_type == 'Phone number') {
-          event.reply('#contactReplyDistinct',{
-            person:person,
-            information: phoneNumber,
-            information_type:information_type
-          });
+          if(phoneNumber != ''){
+            event.reply('#contactReplyDistinct',{
+              person:person,
+              information: phoneNumber,
+              information_type:information_type
+            });
+          }else{
+            event.reply('#contactErrorReply',{
+              person:person,
+              information_type:information_type
+            });
+          }
+
         }
       })
 

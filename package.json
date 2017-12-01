@@ -8,6 +8,7 @@
     "botpress-api.ai": "^2.1.6",
     "botpress-terminal": "^1.0.2",
     "botpress-web": "1.x",
+    "knex": "^0.14.2",
     "lodash": "^4.17.4"
   },
   "scripts": {
