@@ -28,3 +28,7 @@ emailErrorReply :
 contactErrorReply:
     -typing: true
     text : Sorry ! {{person}}'s  {{information_type}} is not in the contact list
+
+askPerson:
+    -typing: true
+    text : Whose contact details do you want?
