@@ -16,3 +16,19 @@ contactReply:
 contactReplyDistinct:
   - typing : true
     text: {{information_type}} of Dr.{{person}} is {{information}}
+
+telErrorReply:
+  - typing : true
+    text: Email address {{email}} \n Sorry ! No Telephone number was found
+
+emailErrorReply :
+    -typing: true
+    text : Telephone number  {{phoneNumber}} \n Sorry ! No email address was found
+
+contactErrorReply:
+    -typing: true
+    text : Sorry ! {{person}}'s  {{information_type}} is not in the contact list
+
+askPerson:
+    -typing: true
+    text : Whose contact details do you want?
