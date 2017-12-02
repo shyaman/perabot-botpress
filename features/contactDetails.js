@@ -224,7 +224,7 @@ module.exports = bp => {
 
   })
 
-  //trigger for context awareness 
+  //trigger for context awareness
   bp.hear({'nlp.metadata.intentName': 'contact_information_with_contexts'}, (event, next) => {
 
     const information_type = _.get(event, 'nlp.parameters.information_type')
