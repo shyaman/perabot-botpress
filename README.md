@@ -115,8 +115,8 @@ __30 Nov 2017__
 __
 ### Support or Contact
 
-- Sandali Dewni Lokuge    `sdewnilokuge@gmail.com `
 - Puwasuru Ihalagedara    `puwasuru95@gmail.com `
 - Shyaman Madhawa         `shayaman321@gmail.com`
+- Sandali Dewni Lokuge    `sdewnilokuge@gmail.com `
 
 _This is an undergraduate project for the subject CO227_
