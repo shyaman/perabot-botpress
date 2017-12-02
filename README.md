@@ -110,7 +110,7 @@ __2 Dec 2017__
 
 __30 Nov 2017__
 
-- When we were familiar with the tools and the technologies, we moved to work on this feature while implementing the above feature
+- When we were familiar with the tools and the technologies, we moved to work on this feature while implementing the above feature.
 
 __
 ### Support or Contact
