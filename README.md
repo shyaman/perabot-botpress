@@ -98,11 +98,11 @@ __22 Nov 2017 to 25 Nov 2017__
 
 - At the end, we decided to use DialogFlow for natural language processing, pgAdmin3 to maintain a local database, Knex.js as the query builder and botpress as the bot framework.
 
-__26 Nov 2017
+__26 Nov 2017__
 
 - Again we started implmenting same feature using the above techonologies and tools.
 
-__2 Dec 2017
+__2 Dec 2017__
 
 - We were able to finish the implementation without previous drawbacks.
 
