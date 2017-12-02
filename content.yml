@@ -32,3 +32,11 @@ contactErrorReply:
 askPerson:
     -typing: true
     text : Whose contact details do you want?
+
+error:
+  -typing: true
+  text : sorry no  such person named {{person}}
+
+suggestNames:
+  -typing: true
+  text : Do you mean {{suggestions}} ?
