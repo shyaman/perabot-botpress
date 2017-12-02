@@ -8,3 +8,11 @@ goodbye:
   - text: You are leaving because of reason {{reason}}
     typing: true
   - Hope to see you back again soon! # if no other properties, you can just send a strings
+
+nextSubject:
+  - text: You have {{subject}} at {{time}}
+    typing: 1s
+
+noSubject:
+  - text: You have no subjects today
+    typing: 250ms
