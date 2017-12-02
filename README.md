@@ -51,6 +51,7 @@ eg: What do I have after lunch break?
 1.	NLP libraries such as TextBlob, Stanford’s CoreNLP, SpaCy
 2.	Wit.ai
 3.	Dialogflow (Api.ai)
+4.  Microsoft Luis
 </pre>
 
 - TextBlob is built on top of NLTK, and it's more easily-accessible. This is the favorite library for fast-prototyping or building applications that don't require highly optimized performance.  
@@ -64,6 +65,8 @@ eg: What do I have after lunch break?
 - Then we considered about Wit.ai and Dialogflow (Api.ai).
 
 - Wit.ai is a natural language interface for applications that can transform sentences into structured data. Dialogflow is a natural language tool dedicated to designing unique conversation scenarios, degenerating corresponding actions and analyzing interactions with users.
+
+- Microsoft Luis uses machine learning to allow developers to build applications that can receive user input in natural language and extract meaning from it. If we are going to use this technology, we have to build a middleware. But according to our time limit we thought that we could not be able to finish our project we if use this technology even though it provides all the necessary elements for building conversations.
 
 - Unlike Wit.ai, Dialogflow provides one-click integrations with the platform Facebook Messenger. So that using Dialogflow makes the development of PeraBot much easier. 
 
@@ -83,7 +86,33 @@ __18 Nov 2017__
 
 - We were able to implement the feature. But still there are some drawbacks in person name recognizing in NLP.
 
+__22 Nov 2017 to 25 Nov 2017__
 
+- This feature was implemented using only Dialogflow and Ms Azure without using botpress and we found so many drawbacks and we were unable to fix them.
+
+- Sometimes the bot was unble to identify the intents clearly , fetch the data from Ms Azure database quickly, eventhough it identify the intents, we didn't get the expected outputs and sometimes there were timeouts too. 
+
+- Because of those problems we could not continue oir work with only DialogFlow and MS Azure
+
+- Again we searched about MS Luis and Wit.ai technologies, but we have to consider the time we have to implement the bot.
+
+- At the end, we decided to use DialogFlow for natural language processing, pgAdmin3 to maintain a local database, Knex.js as the query builder and botpress as the bot framework.
+
+__26 Nov 2017
+
+- Again we started implmenting same feature using the above techonologies and tools.
+
+__2 Dec 2017
+
+- We were able to finish the implementation without previous drawbacks.
+
+#### Milestone 2 - Implementing the feature of querying about the timetables
+
+__30 Nov 2017__
+
+- When we were familiar with the tools and the technologies, we moved to work on this feature while implementing the above feature
+
+__
 ### Support or Contact
 
 - Sandali Dewni Lokuge    `sdewnilokuge@gmail.com `
