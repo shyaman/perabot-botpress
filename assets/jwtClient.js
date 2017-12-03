@@ -9,7 +9,6 @@ let google = require('googleapis');
 //   privatekey.private_key,
 //   ['https://www.googleapis.com/auth/calendar']);
 
-
   let jwtClient = new google.auth.JWT(
     process.env.CLIENT_EMAIL,
     null,
