@@ -1,20 +1,20 @@
 let google = require('googleapis');
 
-//**comment when deploying
-let privatekey = require("./privatekey.json");  //private key of service account(not required for deployed app)
-// configure a JWT auth client
-let jwtClient = new google.auth.JWT(
-  privatekey.client_email,
-  null,
-  privatekey.private_key,
-  ['https://www.googleapis.com/auth/calendar']);
+// //**comment when deploying
+// let privatekey = require("./privatekey.json");  //private key of service account(not required for deployed app)
+// // configure a JWT auth client
+// let jwtClient = new google.auth.JWT(
+//   privatekey.client_email,
+//   null,
+//   privatekey.private_key,
+//   ['https://www.googleapis.com/auth/calendar']);
 
 
-  // let jwtClient = new google.auth.JWT(
-  //   process.env.CLIENT_EMAIL,
-  //   null,
-  //   process.env.PRIVATE_KEY ,
-  //   ['https://www.googleapis.com/auth/calendar']);
+  let jwtClient = new google.auth.JWT(
+    process.env.CLIENT_EMAIL,
+    null,
+    process.env.PRIVATE_KEY ,
+    ['https://www.googleapis.com/auth/calendar']);
 
 
     //authenticate request
