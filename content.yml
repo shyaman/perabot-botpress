@@ -20,3 +20,11 @@ noSubject:
 dailyTimetable:
   - text: {{subject}} from {{startTime}} to {{endTime}}
     typing: 250ms
+
+subjectTime:
+  - text : You have {{subjectCode}} From {{starting}} to {{ending}}
+    typing: 250ms
+
+noLectures:
+  - text: You have no lectures of {{subject}}
+    typing: 250ms
