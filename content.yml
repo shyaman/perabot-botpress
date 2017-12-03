@@ -16,3 +16,7 @@ nextSubject:
 noSubject:
   - text: You have no subjects today
     typing: 250ms
+
+dailyTimetable:
+  - text: {{subject}} from {{startTime}} to {{endTime}}
+    typing: 250ms
