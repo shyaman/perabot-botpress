@@ -16,12 +16,15 @@ let google = require('googleapis');
     process.env.PRIVATE_KEY ,
     ['https://www.googleapis.com/auth/calendar']);
 
+console.log(process.env.CLIENT_EMAIL,process.env.PRIVATE_KEY);
 
     //authenticate request
     jwtClient.authorize(function (err, tokens) {
       if (err) {
         console.log(err);
         return;
+      }else {
+        console.log("successfully connected");
       }
     });
 
