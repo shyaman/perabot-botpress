@@ -12,7 +12,7 @@ let google = require('googleapis');
   let jwtClient = new google.auth.JWT(
     process.env.CLIENT_EMAIL,
     null,
-    process.env.PRIVATE_KEY ,
+    process.env.PRIVATE_KEY.replace(/\\n/g, '\n') ,
     ['https://www.googleapis.com/auth/calendar']);
 
 console.log(process.env.CLIENT_EMAIL,process.env.PRIVATE_KEY);
