@@ -2,8 +2,6 @@ module.exports = bp => {
   bp.hear(/GET_STARTED|hello|hi|test|hey|holla/i, (event, next) => {
 
     event.reply('#welcome') // See the file `content.yml` to see the block
-    event.reply(event.nlp)
-
   })
 
   // You can also pass a matcher object to better filter events
