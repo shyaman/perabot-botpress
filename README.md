@@ -51,7 +51,8 @@ eg: What do I have after lunch break?
 1.	NLP libraries such as TextBlob, Stanford’s CoreNLP, SpaCy
 2.	Wit.ai
 3.	Dialogflow (Api.ai)
-4.  Microsoft Luis
+4.	Microsoft Luis
+
 </pre>
 
 - TextBlob is built on top of NLTK, and it's more easily-accessible. This is the favorite library for fast-prototyping or building applications that don't require highly optimized performance.  
