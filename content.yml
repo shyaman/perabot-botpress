@@ -40,3 +40,15 @@ error:
 suggestNames:
   -typing: true
   text : Do you mean {{suggestions}} ?
+  
+nextSubject:
+  - text: You have {{subject}} at {{time}}
+    typing: 1s
+
+noSubject:
+  - text: You have no subjects today
+    typing: 250ms
+
+dailyTimetable:
+  - text: {{subject}} from {{startTime}} to {{endTime}}
+    typing: 250ms

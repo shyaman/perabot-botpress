@@ -47,4 +47,5 @@ jspm_packages
 /data
 /modules_config
 
+# api keys
 privatekey.json
