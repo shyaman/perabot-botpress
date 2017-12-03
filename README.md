@@ -100,7 +100,7 @@ __22 Nov 2017 to 25 Nov 2017__
 
 __26 Nov 2017__
 
-- Again we started implmenting same feature using the above techonologies and tools.
+- Again we started implementing same feature using the above techonologies and tools.
 
 __2 Dec 2017__
 
