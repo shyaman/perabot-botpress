@@ -113,9 +113,12 @@ __30 Nov 2017__
 
 - When we were familiar with the tools and the technologies, we moved to work on this feature while implementing the above feature.
 
+- We made the timetable in google calender and used calender api to implement this feature
+
 - As the first stage of building this feature, we are working to get the details of the timetable of E14 Students in Computer Engineering Department.
 
 - Later, we will implement to get the timetable according to the relevant students. 
+
 
 ### Support or Contact
 
