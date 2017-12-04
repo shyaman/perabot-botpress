@@ -76,4 +76,57 @@ module.exports = bp =>{
        }
     });
   })
+
+  bp.hear({'nlp.metadata.intentName': 'get_timetable_subject_given'}, (event, next) =>{
+
+    let mydate = _.get(event, 'nlp.parameters.date')
+    let subject = _.get(event, 'nlp.parameters.subject').trim()
+
+
+    calendar.events.list({
+      auth: jwtClient,
+      calendarId: 'mhu2j2t8ar0vea03t7orsmrbts@group.calendar.google.com',
+      timeMin: (new Date(new Date(mydate).setHours(7,30,0))).toISOString(),
+      timeMax:(new Date(new Date(mydate).setHours(18,30,0))).toISOString(),
+      maxResults: 10,
+      singleEvents: true,
+      orderBy: 'startTime'
+    },  (err, response) => {
+       if (err) {
+           console.log('The API returned an error: ' + err);
+           return;
+       }
+       var calEvents = response.items;
+
+       if (calEvents.length == 0) {
+           event.reply('#noSubject')
+       } else {
+           var flag = 0;
+           for (let sub of response.items) {
+               let eventStartTime = new Date(sub.start.dateTime);
+               let eventEndTime = new Date(sub.end.dateTime);
+
+               let code = _.get(sub,'summary')
+               // Trim the subject code part
+               let subcode = code.substr(0,5)
+               // Compare subjects
+               if (subcode==subject) {
+                 flag = 1;
+                 event.reply('#subjectTime',{
+                    subjectCode : subject,
+                    starting : eventStartTime.toLocaleTimeString(),
+                    ending : eventEndTime.toLocaleTimeString()
+                 })
+               }
+
+           }
+           if(flag==0){
+             event.reply('#noLectures',{
+               subject : subject
+             })
+           }
+       }
+    })
+ })
+
 }
