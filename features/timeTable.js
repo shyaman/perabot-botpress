@@ -77,7 +77,6 @@ module.exports = bp =>{
     });
   })
 
-  module.exports = bp =>{
   bp.hear({'nlp.metadata.intentName': 'get_timetable_subject_given'}, (event, next) =>{
 
     let mydate = _.get(event, 'nlp.parameters.date')
@@ -127,6 +126,7 @@ module.exports = bp =>{
              })
            }
        }
-    });
+    })
  })
+
 }
