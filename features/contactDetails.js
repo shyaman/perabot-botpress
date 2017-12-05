@@ -224,34 +224,5 @@ module.exports = bp => {
 
   })
 
-  //trigger for context awareness
-  bp.hear({'nlp.metadata.intentName': 'contact_information_with_contexts'}, (event, next) => {
-
-    const information_type = _.get(event, 'nlp.parameters.information_type')
-    let person = _.get(event, 'nlp.parameters.person')
-
-    bp.db.get().then(knex => knex('contacts').where({name : person}))
-    .then(contact =>{
-      const email = _.get(contact[0],'email')
-      const phoneNumber = _.get(contact[0],'telephone')
-
-      if (information_type == 'Email address') {
-        event.reply('#contactReplyDistinct',{
-          person:person,
-          information: email,
-          information_type:information_type
-        });
-
-      } else if (information_type == 'Phone number') {
-        event.reply('#contactReplyDistinct',{
-          person:person,
-          information: phoneNumber,
-          information_type:information_type
-        });
-
-      }
-    })
-
-})
 
 }
