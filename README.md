@@ -107,6 +107,10 @@ __2 Dec 2017__
 
 - We were able to finish the implementation without previous drawbacks.
 
+- But there are some drawbacks in dialogflow when the user type a text with spelling mistakes.
+
+- We created a facebook page named "PeraBot" and this feature was tested via facebook messenger.
+
 #### Milestone 2 - Implementing the feature of querying about the timetables
 
 __30 Nov 2017__
@@ -118,6 +122,14 @@ __30 Nov 2017__
 - As the first stage of building this feature, we are working to get the details of the timetable of E14 Students in Computer Engineering Department.
 
 - Later, we will implement to get the timetable according to the relevant students. 
+
+__4 Dec 2017__
+
+- We almost finished the first stage of this feature.
+
+- But there are some drawbacks in dialogflow when the user type a text with spelling mistakes.
+
+- This feature was tested via facebook messenger.
 
 
 ### Support or Contact
