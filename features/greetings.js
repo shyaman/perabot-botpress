@@ -1,5 +1,5 @@
 module.exports = bp => {
-  bp.hear(/GET_STARTED|hello|hi|test|hey|holla/i, (event, next) => {
+  bp.hear({'nlp.metadata.intentName': 'Default Welcome Intent'}, (event, next) => {
 
     event.reply('#welcome') // See the file `content.yml` to see the block
   })
