@@ -39,7 +39,7 @@ module.exports = bp => {
               const phoneNumber = _.get(contact[0],'telephone')
 
               if(contact.length != 0){
-                if (information_type == '') {
+                if (information_type == ''  || information_type =='Email Address and Phone Number') {
                   if(email != '' && phoneNumber != ''){
                     event.reply('#contactReply',{
                       person:person,
