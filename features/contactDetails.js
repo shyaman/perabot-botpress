@@ -106,6 +106,13 @@ module.exports = bp => {
                         }
                       },
                     {
+                      pattern: utterances.no,
+                      callback: () => {
+                        const convo = bp.convo.find(event)
+                        convo && convo.stop('aborted')
+                      }
+                    },
+                    {
                       default: true,    //if its not in correct pattern, question repeat
                       callback: () => {
                         convo.repeat()
@@ -173,7 +180,8 @@ module.exports = bp => {
                       event.reply('#sorry')
                     }
                   })
-
+                  convo.on('aborted', () => { convo.say('OK. Is there anything else I could help you with?') })
+                  
                   }else{
                     bp.db.get().then(knex => knex('contacts').whereRaw('LOWER(name) LIKE ?','%'+splitName[1].toLowerCase()+'%').select('name'))
                     .then(suggestions =>{
