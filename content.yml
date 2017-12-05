@@ -39,7 +39,7 @@ error:
 
 suggestNames:
   -typing: true
-  text : Do you mean {{suggestions}} ?
+  text : Do you mean {{suggestions}} ? please try again with the correct name
   
 nextSubject:
   - text: You have {{subject}} at {{time}}
