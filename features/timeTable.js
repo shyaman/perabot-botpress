@@ -25,6 +25,7 @@ module.exports = bp =>{
            event.reply('#noSubject')
        } else {
            const curTime = new Date();
+           let found = 0;
            for (let calEvent of response.items) {
                let eventTime = new Date(calEvent.start.dateTime);
                diff  = eventTime - curTime;
@@ -35,10 +36,13 @@ module.exports = bp =>{
                     subject : nextSubject,
                     time : eventTime.toLocaleTimeString()
                   })
+                  found = 1;
                   break;
                }
            }
-           event.reply('#noSubject')
+           if (found == 0) {
+             event.reply('#noSubject')
+           } 
        }
     });
   })
