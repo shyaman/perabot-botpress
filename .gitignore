@@ -47,5 +47,6 @@ jspm_packages
 /data
 /modules_config
 
-# api keys
+# api keys and passwords
 privatekey.json
+mailPass.json

@@ -22,7 +22,7 @@ let google = require('googleapis');
         console.log(err);
         return;
       }else {
-        console.log("successfully connected");
+        // console.log("API successfully connected");
       }
     });
 

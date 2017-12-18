@@ -40,7 +40,7 @@ error:
 suggestNames:
   -typing: true
   text : Do you mean {{suggestions}} ? please try again with the correct name
-  
+
 nextSubject:
   - text: You have {{subject}} at {{time}}
     typing: 1s
@@ -59,4 +59,8 @@ subjectTime:
 
 noLectures:
   - text: You have no lectures of {{subject}}
+    typing: 250ms
+
+askENum:
+  - text: Enter your enrolment number (E/XX/XXX)
     typing: 250ms
