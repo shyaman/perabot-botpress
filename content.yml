@@ -62,5 +62,5 @@ noLectures:
     typing: 250ms
 
 askENum:
-  - text: Enter your enrolment number (E/XX/XXX)
+  - text: Enter your enrollment number (E/XX/XXX)
     typing: 250ms

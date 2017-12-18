@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 module.exports = (message,mailAddr) =>{
 
   var mailOptions = {
-    from: mailAuth.mail,
+    from: 'perabot.acc@gmail.com',
     to: mailAddr,
     subject: 'Perabot Verification',
     text: message
