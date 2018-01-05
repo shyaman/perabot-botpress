@@ -177,10 +177,7 @@
     type: /message|text/i,
     text: /exit|bye|goodbye|quit|done|leave|stop/i
   }, (event, next) => {
-    event.reply('#goodbye', {
-      // You can pass data to the UMM bloc!
-      reason: 'unknown'
-    })
+    event.reply('#goodbye')
   })
 
   bp.hear(/stop|abort|cancel/i, (event, next) => {
