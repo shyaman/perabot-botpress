@@ -34,7 +34,7 @@ askPerson:
 
 error:
   -typing: true
-  text : sorry no  such person named {{person}}
+  text : sorry no such person named {{person}}
 
 suggestNames:
   -typing: true
