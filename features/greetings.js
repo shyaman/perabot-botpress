@@ -89,21 +89,21 @@
           convo.threads['role'].addQuestion(quick('You are a ?',list_roles), response =>{
             convo.set('role', response.text)
             if (response.text == 'S') {
-              convo.switchTo('eNum')
+              convo.switchTo('regNum')
             } else {
               convo.switchTo('department')
             }
           });
 
-          convo.createThread('eNum');
-          convo.threads['eNum'].addQuestion('#askENum', [
+          convo.createThread('regNum');
+          convo.threads['regNum'].addQuestion('#askregNum', [
             {
               pattern: /(.\/\d\d\/\d\d\d)/i,
               callback: (response) => {
-                convo.set('eNum', response.match);
+                convo.set('regNum', response.match);
                 let verificationCode = randomstring.generate(10);
                 convo.set('verificationCode', verificationCode);
-                bp.db.get().then(knex => knex('userDetails').where({eNum:convo.get('eNum')}).select('emailAddress')).then(email =>{
+                bp.db.get().then(knex => knex('userDetails').where({regNum:convo.get('regNum')}).select('emailAddress')).then(email =>{
                   mail = _.get(email[0],'emailAddress');
                   mailer('Your verification code : '+ verificationCode,mail,'Perabot Verification');
                   convo.say(bp.messenger.createText(event.user.id,'I have sent an email. Check your inbox'));
@@ -140,7 +140,7 @@
       );
       convo.on('done', () => {
         if (convo.get('role') == 'S') {
-          bp.db.get().then(knex => knex('userDetails').where({eNum:convo.get('eNum')}).update({
+          bp.db.get().then(knex => knex('userDetails').where({regNum:convo.get('regNum')}).update({
             userId:event.user.id,
             role:convo.get('role'),
             department:convo.get('department'),
