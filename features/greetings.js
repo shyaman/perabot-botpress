@@ -96,7 +96,7 @@
           });
 
           convo.createThread('regNum');
-          convo.threads['regNum'].addQuestion('#askregNum', [
+          convo.threads['regNum'].addQuestion('#askENum', [
             {
               pattern: /(.\/\d\d\/\d\d\d)/i,
               callback: (response) => {

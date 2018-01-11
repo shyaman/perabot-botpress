@@ -7,7 +7,6 @@
     "botpress": "1.x",
     "botpress-api.ai": "^2.1.6",
     "botpress-messenger": "^2.2.9",
-    "botpress-terminal": "^1.0.2",
     "botpress-web": "1.x",
     "google-auth-library": "^0.12.0",
     "googleapis": "^23.0.0",
