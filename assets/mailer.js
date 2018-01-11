@@ -1,23 +1,23 @@
 var nodemailer = require('nodemailer');
 
-//comment this when deploy
-let mailAuth = require("./mailPass.json");
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: mailAuth.mail,
-    pass: mailAuth.pass
-  }
-});
-
-
+// //comment this when deploy
+// let mailAuth = require("./mailPass.json");
 // const transporter = nodemailer.createTransport({
 //   service: 'gmail',
 //   auth: {
-//     user: process.env.MAILER_EMAIL,
-//     pass: process.env.MAILER_PASSWORD
+//     user: mailAuth.mail,
+//     pass: mailAuth.pass
 //   }
 // });
+
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.MAILER_EMAIL,
+    pass: process.env.MAILER_PASSWORD
+  }
+});
 
 module.exports = (message,mailAddr,subject) =>{
 
