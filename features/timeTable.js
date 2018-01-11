@@ -5,17 +5,6 @@ const _ = require('lodash');
 //Google Calendar API
 let calendar = google.calendar('v3');
 
-const selectcalendar = (userId,bp) =>{
-  bp.db.get().then(knex => knex('userDetails').where({userId:event.user.id})).then(person =>{
-    const department = _.get(person[0],'department');
-    const batch = (_.get(person[0],'eNum').split("/"))[1];
-    bp.db.get().then(knex => knex('calendarDetails').where({batch:batch,department:department})).then(calendarEntry =>{
-      calendarId = _.get(calendarEntry[0],'calendarId');
-
-    })
-  })
-}
-
 module.exports = bp =>{
   bp.hear({'nlp.metadata.intentName': 'get_timetable_next'}, (event, next) =>{
 
