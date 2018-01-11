@@ -5,7 +5,6 @@ const _ = require('lodash');
 //Google Calendar API
 let calendar = google.calendar('v3');
 
-
 module.exports = bp =>{
   bp.hear({'nlp.metadata.intentName': 'get_timetable_next'}, (event, next) =>{
 

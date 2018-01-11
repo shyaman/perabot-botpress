@@ -105,7 +105,7 @@
                 convo.set('verificationCode', verificationCode);
                 bp.db.get().then(knex => knex('userDetails').where({eNum:convo.get('eNum')}).select('emailAddress')).then(email =>{
                   mail = _.get(email[0],'emailAddress');
-                  mailer('Your verification code : '+ verificationCode,mail);
+                  mailer('Your verification code : '+ verificationCode,mail,'Perabot Verification');
                   convo.say(bp.messenger.createText(event.user.id,'I have sent an email. Check your inbox'));
                   convo.switchTo('Verification');
                 });
