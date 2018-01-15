@@ -8,7 +8,7 @@ let calendar = google.calendar('v3');
 const selectcalendar = (userId,bp) =>{
   bp.db.get().then(knex => knex('userDetails').where({userId:event.user.id})).then(person =>{
     const department = _.get(person[0],'department');
-    const batch = (_.get(person[0],'eNum').split("/"))[1];
+    const batch = (_.get(person[0],'regNum').split("/"))[1];
     bp.db.get().then(knex => knex('calendarDetails').where({batch:batch,department:department})).then(calendarEntry =>{
       calendarId = _.get(calendarEntry[0],'calendarId');
 
@@ -21,7 +21,7 @@ module.exports = bp =>{
 
     bp.db.get().then(knex => knex('userDetails').where({userId:event.user.id})).then(person =>{
       const department = _.get(person[0],'department');
-      const batch = (_.get(person[0],'eNum').split("/"))[1];
+      const batch = (_.get(person[0],'regNum').split("/"))[1];
       bp.db.get().then(knex => knex('calendarDetails').where({batch:batch,department:department})).then(calendarEntry =>{
         calendarId = _.get(calendarEntry[0],'calendarId');
   calendar.events.list({
@@ -72,7 +72,7 @@ module.exports = bp =>{
 
     bp.db.get().then(knex => knex('userDetails').where({userId:event.user.id})).then(person =>{
       const department = _.get(person[0],'department');
-      const batch = ((_.get(person[0],'eNum')).split("/"))[1];
+      const batch = ((_.get(person[0],'regNum')).split("/"))[1];
       bp.db.get().then(knex => knex('calendarDetails').where({batch:batch,department:department})).then(calendarEntry =>{
         calendarId = _.get(calendarEntry[0],'calendarId');
   const getDate = _.get(event, 'nlp.parameters.date')
@@ -115,7 +115,7 @@ module.exports = bp =>{
 
     bp.db.get().then(knex => knex('userDetails').where({userId:event.user.id})).then(person =>{
       const department = _.get(person[0],'department');
-      const batch = (_.get(person[0],'eNum').split("/"))[1];
+      const batch = (_.get(person[0],'regNum').split("/"))[1];
       bp.db.get().then(knex => knex('calendarDetails').where({batch:batch,department:department})).then(calendarEntry =>{
         calendarId = _.get(calendarEntry[0],'calendarId');
       calendar.events.list({
@@ -169,7 +169,7 @@ module.exports = bp =>{
 
     bp.db.get().then(knex => knex('userDetails').where({userId:event.user.id})).then(person =>{
       const department = _.get(person[0],'department');
-      const batch = (_.get(person[0],'eNum').split("/"))[1];
+      const batch = (_.get(person[0],'regNum').split("/"))[1];
       bp.db.get().then(knex => knex('calendarDetails').where({batch:batch,department:department})).then(calendarEntry =>{
         calendarId = _.get(calendarEntry[0],'calendarId');
 
