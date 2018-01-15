@@ -184,4 +184,9 @@
       const convo = bp.convo.find(event)
       convo && convo.stop('aborted')
       })
+
+  bp.hear({'nlp.metadata.intentName': 'Default Fallback Intent'}, (event, next) => {
+    convo.say(bp.messenger.createText(event.user.id,'I did not get that. Can you say it again?'))
+
+          })
 }
