@@ -32,6 +32,10 @@ askPerson:
     -typing: true
     text : Whose contact details do you want?
 
+Fallback:
+    -typing: true
+    text : I missed what you said. Say it again?
+
 error:
   -typing: true
   text : sorry no such person named {{person}}
