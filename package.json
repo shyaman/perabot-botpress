@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "botpress": "1.x",
-    "botpress-api.ai": "^2.1.6",
-    "botpress-messenger": "^2.2.9",
+    "botpress": "^1.1.13",
+    "botpress-api.ai": "^2.1.7",
+    "botpress-messenger": "^2.2.11",
     "botpress-web": "1.x",
     "google-auth-library": "^0.12.0",
-    "googleapis": "^23.0.0",
-    "knex": "^0.14.2",
-    "lodash": "^4.17.4",
-    "nodemailer": "^4.4.1",
+    "googleapis": "^23.0.2",
+    "knex": "^0.14.4",
+    "lodash": "^4.17.5",
+    "nodemailer": "^4.6.2",
     "randomstring": "^1.1.5"
   },
   "scripts": {
