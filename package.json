@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "botpress": "^1.1.13",
+    "botpress": "^10.51.5",
     "botpress-api.ai": "^2.1.7",
     "botpress-messenger": "^2.2.11",
     "botpress-web": "1.x",
